@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vijay Yadav — Full-Stack Developer · Websites, iOS & Android Apps, SEO</title>
+<meta name="description" content="Vijay Yadav, full-stack developer with 11+ years of experience. Websites, iOS and Android apps, admin panels and SEO for clinics, law firms, showrooms and growing businesses.">
+<meta property="og:title" content="Vijay Yadav — Full-Stack Developer">
+<meta property="og:description" content="Websites, mobile apps, admin panels and SEO. 11+ years, clients in 9 countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#090b10;--surface:#11151e;--surface2:#171d29;--text:#f4f6fb;--muted:#9ba6b8;--line:hsla(0,0%,100%,.1);--accent:#a7f36b;--accent-ink:#11170c;--glow:rgba(167,243,107,.14);--shadow:0 30px 80px rgba(0,0,0,.45);--pad:clamp(18px,4vw,40px)}
+:root[data-theme=light]{color-scheme:light;--bg:#f7f8fa;--surface:#fff;--surface2:#eef1f5;--text:#101521;--muted:#5e6878;--line:rgba(16,21,33,.12);--accent:#5e9e28;--accent-ink:#fff;--glow:rgba(94,158,40,.12);--shadow:0 30px 70px rgba(16,21,33,.12)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+::selection{background:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+.kicker{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.kicker.red{color:var(--accent)}
+.h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04;font-weight:800;letter-spacing:-.035em;text-wrap:balance}
+.lead{font-size:17px;color:var(--muted);text-wrap:pretty}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;font-weight:700;font-size:15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);transition:transform .15s,background .15s,border-color .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--text)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{color:var(--accent-ink);box-shadow:0 12px 30px var(--glow)}
+.tag{display:inline-block;padding:5px 11px;font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:999px;background:var(--surface2);color:var(--muted)}
+.tag-red{background:var(--glow);border-color:transparent;color:var(--accent)}
+section{padding:clamp(72px,9vw,120px) 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.sec-head>div{display:flex;flex-direction:column;gap:14px}
+.sec-head .lead{max-width:440px}
+.grid{display:grid;gap:18px}
+.grid>*{background:var(--surface);border:1px solid var(--line);border-radius:22px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.grid>*:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:var(--shadow)}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))}
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+.brand{white-space:nowrap;display:flex;align-items:center;gap:12px;font-weight:800;font-size:17px;letter-spacing:-.01em}
+.brand b{background:var(--accent);color:var(--accent-ink);width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:13px}
+.links{white-space:nowrap;display:flex;gap:clamp(16px,2vw,30px);font-size:14.5px;font-weight:500;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.nav-r{display:flex;align-items:center;gap:10px}
+.icon-btn{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;justify-content:center}
+.icon-btn:hover{border-color:var(--accent)}
+.menu-btn{display:none}
+.mobile-menu{display:none;border-top:1px solid var(--line)}
+.mobile-menu a{display:block;padding:15px var(--pad);border-bottom:1px solid var(--line);font-weight:600}
+@media (max-width:1080px){.links,.nav-cta{display:none!important}.menu-btn{display:inline-flex}.mobile-menu.open{display:block}}
+.hero-wrap{position:relative;overflow:hidden}
+.hero-wrap::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 30% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 30% 30%,#000 30%,transparent 75%);opacity:.7}
+.hero-wrap::after{content:"";position:absolute;width:620px;height:620px;right:-140px;top:-180px;background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none}
+.hero{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,5vw,64px);align-items:center;padding:clamp(64px,9vw,120px) 0 clamp(56px,7vw,96px)}
+.hero-l{display:flex;flex-direction:column;gap:28px}
+.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px;font-weight:600;color:var(--muted)}
+.hero h1{font-size:clamp(44px,6.4vw,84px);line-height:1;font-weight:800;letter-spacing:-.045em;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{font-size:clamp(17px,1.4vw,20px);max-width:580px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;box-shadow:0 0 0 4px var(--glow)}
+.hero-r{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:170px;background:var(--surface);border:1px solid var(--line);border-radius:22px}
+.stat .big{white-space:nowrap;font-size:clamp(38px,4.2vw,60px);font-weight:800;line-height:1;letter-spacing:-.04em}
+.stat .big small{font-size:16px;letter-spacing:0;font-weight:600;color:var(--muted)}
+.stat.red{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.stat.red .kicker{color:var(--accent-ink);opacity:.75}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.ticker{display:flex;flex-wrap:wrap;gap:10px 28px;padding:22px 0 0;border-top:1px solid var(--line);position:relative;z-index:1;margin-bottom:56px;color:var(--muted);font-weight:600;font-size:14px}
+.ticker span::before{content:"● ";color:var(--accent);font-size:9px;vertical-align:middle}
+.svc{padding:30px;display:flex;flex-direction:column;gap:16px;min-height:340px}
+.svc .num{font-weight:700;color:var(--accent);font-size:13px;width:44px;height:44px;border-radius:14px;background:var(--glow);display:flex;align-items:center;justify-content:center}
+.svc h3{font-size:23px;line-height:1.15;font-weight:800;letter-spacing:-.02em}
+.svc ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--muted)}
+.svc li::before{content:"✓  ";color:var(--accent);font-weight:800}
+.svc .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.ctrl{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:clamp(32px,5vw,64px);align-items:start}
+.ctrl-l{display:flex;flex-direction:column;gap:20px;position:sticky;top:110px}
+.checks div{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font-weight:500}
+.checks div::before{content:"✓";color:var(--accent);font-weight:800}
+@media (max-width:980px){.ctrl{grid-template-columns:1fr}.ctrl-l{position:static}}
+.demo{border:1px solid var(--line);background:var(--surface);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.demo-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 14px 12px 18px;border-bottom:1px solid var(--line);background:var(--surface2)}
+.demo-bar .t{font-weight:700;font-size:14px;display:flex;align-items:center;gap:10px}
+.demo-bar .t::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.seg{display:flex;padding:3px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.seg button{padding:7px 14px;font-size:13px;font-weight:600;color:var(--muted);border-radius:999px}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+.industry{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line);overflow-x:auto}
+.industry button{padding:9px 14px;font-weight:600;font-size:13.5px;border-radius:12px;color:var(--muted);white-space:nowrap;border:1px solid transparent}
+.industry button[aria-pressed=true]{background:var(--bg);color:var(--text);border-color:var(--line)}
+.industry button:hover{color:var(--text)}
+.demo-body{display:grid;grid-template-columns:minmax(0,1fr) 260px}
+.demo-main{padding:20px;display:flex;flex-direction:column;gap:20px;border-right:1px solid var(--line);min-width:0}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpis>div{padding:14px;border-radius:14px;background:var(--bg);border:1px solid var(--line)}
+.kpis .v{font-size:26px;font-weight:800;line-height:1.1;letter-spacing:-.03em}
+.kpis .l{font-size:12px;color:var(--muted);font-weight:500}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+.row .who{font-weight:600}
+.row .what{color:var(--muted);font-size:13px}
+.st{font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:999px;background:var(--surface2);color:var(--muted);white-space:nowrap}
+.st.new{background:var(--glow);color:var(--accent)}
+.act{font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:999px;border:1px solid var(--line)}
+.act:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.act:disabled{opacity:.4;cursor:default;background:none;color:inherit;border-color:var(--line)}
+.settings{display:flex;flex-direction:column;gap:2px}
+.toggle{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:500;width:100%;text-align:left}
+.sw{width:42px;height:24px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);position:relative;flex:none;transition:background .2s}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:var(--muted);transition:left .2s,background .2s}
+.toggle[aria-checked=true] .sw{background:var(--accent);border-color:var(--accent)}
+.toggle[aria-checked=true] .sw::after{left:20px;background:var(--accent-ink)}
+.field{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:600;color:var(--muted)}
+.field input{font:inherit;font-size:15px;font-weight:500;padding:12px 14px;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:12px;width:100%}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--glow)}
+.demo-side{padding:20px;display:flex;flex-direction:column;gap:14px;align-items:center;background:var(--bg)}
+.demo-side .kicker{align-self:flex-start;font-size:11px}
+.phone{width:214px;border:7px solid #000;border-radius:34px;background:#fff;color:#101521;display:flex;flex-direction:column;min-height:420px;overflow:hidden;box-shadow:var(--shadow);transition:width .25s,border-radius .25s}
+.phone .top{background:#101521;color:#fff;padding:22px 14px 14px;display:flex;flex-direction:column;gap:2px}
+.phone .top b{font-size:15px;line-height:1.2}
+.phone .top span{font-size:11px;opacity:.7}
+.phone .body{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}
+.phone .offer{border-radius:12px;padding:10px;font-size:12px;font-weight:700;background:#a7f36b;color:#11170c}
+.phone .item{display:flex;justify-content:space-between;gap:8px;font-size:12px;padding:8px 0;border-bottom:1px solid #eef1f5}
+.phone .item b{font-weight:700}
+.phone .cta{margin-top:auto;background:#101521;color:#fff;padding:12px;font-size:12px;font-weight:700;border-radius:12px;text-align:center}
+.phone .cta.off{background:#eef1f5;color:#5e6878}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--accent);color:var(--accent-ink);padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px;transition:transform .25s;z-index:99;box-shadow:var(--shadow)}
+.toast.show{transform:translate(-50%,0)}
+.demo-body.web{grid-template-columns:1fr}
+.demo-body.web .demo-main{border-right:0;border-bottom:1px solid var(--line)}
+@media (max-width:720px){.demo-body{grid-template-columns:1fr}.demo-main{border-right:0;border-bottom:1px solid var(--line)}}
+.ind{padding:28px;display:flex;flex-direction:column;gap:12px;min-height:220px}
+.ind h3{font-size:21px;font-weight:800;line-height:1.2;letter-spacing:-.02em}
+.ind p{font-size:15px;color:var(--muted)}
+.ind .ico{width:46px;height:46px;border-radius:14px;background:var(--glow);color:var(--accent);display:flex;align-items:center;justify-content:center}
+.work{padding:28px;display:flex;flex-direction:column;gap:14px;min-height:300px}
+.work .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.work .mono{width:56px;height:56px;border-radius:16px;background:var(--surface2);border:1px solid var(--line);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+.work:nth-child(3n+1) .mono{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.work h3{font-size:25px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.work p{font-size:15px;color:var(--muted);text-wrap:pretty}
+.work .tags{display:flex;flex-wrap:wrap;gap:6px}
+.work .go{margin-top:auto;font-weight:700;font-size:14.5px;display:inline-flex;gap:8px;border-top:1px solid var(--line);padding-top:16px;color:var(--accent)}
+.step{padding:28px;display:flex;flex-direction:column;gap:12px}
+.step .n{font-size:48px;font-weight:800;line-height:1;color:var(--accent);letter-spacing:-.04em}
+.step h3{font-size:21px;font-weight:800}
+.step p{font-size:15px;color:var(--muted)}
+.stack{display:grid;grid-template-columns:170px 1fr;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:8px 24px}
+.stack>*{padding:16px 0;border-bottom:1px solid var(--line)}
+.stack>*:nth-last-child(-n+2){border-bottom:0}
+.stack dt{font-weight:800}
+.stack dd{margin:0;display:flex;flex-wrap:wrap;gap:6px}
+@media (max-width:600px){.stack{grid-template-columns:1fr}.stack dt{border-bottom:0;padding-bottom:0}}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,5vw,72px);align-items:start}
+.about-l{display:flex;flex-direction:column;gap:20px}
+.poster{padding:clamp(72px,9vw,120px) 0;border-top:1px solid var(--line)}
+.poster .in{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,5vw,64px);background:var(--surface);border:1px solid var(--line);border-radius:32px;padding:clamp(28px,5vw,56px);position:relative;overflow:hidden}
+.poster .in::before{content:"";position:absolute;width:520px;height:520px;left:-160px;bottom:-260px;background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none}
+.poster h2{font-size:clamp(42px,5.6vw,76px);line-height:1;font-weight:800;letter-spacing:-.045em}
+.poster h2 em{font-style:normal;color:var(--accent)}
+.poster .lines{display:flex;flex-direction:column;gap:10px}
+.poster .lines a{display:flex;justify-content:space-between;gap:16px;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:var(--bg);font-size:clamp(15px,1.4vw,18px);font-weight:700}
+.poster .lines a:hover{border-color:var(--accent);color:var(--text)}
+.poster .lines span{font-weight:600;color:var(--muted);font-size:12px;align-self:center;text-transform:uppercase;letter-spacing:.1em}
+form.quote{display:flex;flex-direction:column;gap:16px;position:relative}
+form.quote .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form.quote select,form.quote textarea{font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:12px;width:100%}
+form.quote select:focus,form.quote textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--glow)}
+form.quote textarea{min-height:100px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer;position:relative}
+.chips input{position:absolute;opacity:0;pointer-events:none;width:1px!important;height:1px;left:0;top:0}
+.chips span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;color:var(--text);background:var(--bg)}
+.chips input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chips input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:520px){form.quote .two{grid-template-columns:1fr}}
+footer{padding:28px 0;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:640px){
+body{font-size:16px}
+.nav-in{height:64px}
+.brand b{width:32px;height:32px;border-radius:10px}
+.hero{padding:44px 0 40px;gap:28px}
+.hero-l{gap:22px}
+.hero h1{font-size:clamp(38px,11vw,52px)}
+.hero-l .btn{width:100%}
+.pill{font-size:12px;padding:7px 12px}
+.hero-r{gap:10px}
+.stat{padding:18px;min-height:130px;gap:14px;border-radius:18px}
+.stat .big{font-size:40px}
+.stat .big small{font-size:13px}
+.ticker{gap:8px 18px;font-size:13px;margin-bottom:36px}
+section,.poster{padding:60px 0}
+.sec-head{margin-bottom:28px}
+.h2{font-size:clamp(30px,8.6vw,40px)}
+.h2 br{display:none}
+.grid{gap:12px}
+.grid>*{border-radius:18px}
+.svc,.ind,.work,.step{padding:22px;min-height:0}
+.demo{border-radius:18px}
+.demo-main,.demo-side{padding:16px}
+.kpis{gap:6px}
+.kpis>div{padding:10px}
+.kpis .v{font-size:20px}
+.kpis .l{font-size:11px}
+.row{grid-template-columns:minmax(0,1fr) auto;row-gap:8px}
+.row .st{grid-column:2;grid-row:1}
+.row .act{grid-column:1/-1;justify-self:start}
+.seg{width:100%}.seg button{flex:1}
+.demo-bar{padding:12px}
+.poster .in{border-radius:22px;padding:24px 18px}
+.poster h2{font-size:clamp(36px,10vw,48px)}
+.poster .lines a{flex-direction:column;gap:2px;padding:14px 16px}
+.poster .lines span{align-self:flex-start;order:-1}
+form.quote .btn{width:100%}
+.about-l .btn{flex:1}
+footer .wrap{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><b>VY</b>Vijay Yadav</a>
+    <nav class="links">
+      <a href="#services">Services</a><a href="#control">Admin panel</a><a href="#industries">Industries</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a>
+    </nav>
+    <div class="nav-r">
+    <button class="icon-btn" id="theme" aria-label="Toggle color theme"></button>
+    <a href="#contact" class="btn btn-primary nav-cta" style="padding:10px 18px">Start a project ↗</a>
+    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="#services">Services</a><a href="#control">Admin panel</a><a href="#industries">Industries</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact" style="color:var(--accent)">Start a project →</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero-wrap"><div class="wrap">
+  <div class="hero">
+    <div class="hero-l">
+      <div class="pill"><span class="dot"></span>Full-stack developer · Available for new projects</div>
+      <h1>Websites, apps and SEO that bring you <em>customers.</em></h1>
+      <p class="lead">I'm Vijay Yadav, a full-stack developer with 11+ years of experience. I design and build your website, your iOS and Android app, and the admin panel you use to run them. Then I make sure people find you on Google.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#contact" class="btn btn-primary" style="min-width:230px">Get a free quote ↗</a>
+        <a href="#control" class="btn btn-secondary">Try the admin panel</a>
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="stat"><span class="kicker">Experience</span><span class="big">11+<small> years</small></span></div>
+      <div class="stat"><span class="kicker">Clients in</span><span class="big">9<small> countries</small></span></div>
+      <div class="stat red"><span class="kicker">One developer, full stack</span><span style="font-size:clamp(22px,2.2vw,30px);font-weight:800;line-height:1.1">Website · App · Backend · SEO</span></div>
+      <div class="stat"><span class="kicker">Live products</span><span class="big">7<small> live</small></span></div>
+    </div>
+  </div>
+<div class="ticker">
+  <span>USA</span><span>UK</span><span>Canada</span><span>Singapore</span><span>Dubai</span><span>Saudi Arabia</span><span>Kuwait</span><span>Bahrain</span><span>India</span>
+</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kicker red">01 / Services</span><h2 class="h2">Everything your business<br>needs online.</h2></div>
+    <p class="lead">No need to hire a designer, a web agency, an app team and an SEO consultant separately. I handle the full stack and stay with you after launch.</p>
+  </div>
+  <div class="grid g4">
+    <div class="svc"><span class="num">01</span><h3>Websites &amp; web apps</h3>
+      <ul><li>Business and portfolio websites</li><li>Booking, enquiry and payment flows</li><li>Customer portals and dashboards</li><li>Fast, mobile-first, easy to update</li></ul>
+      <div class="tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">TypeScript</span></div></div>
+    <div class="svc"><span class="num">02</span><h3>iOS &amp; Android apps</h3>
+      <ul><li>Native iOS in Swift and SwiftUI</li><li>Cross-platform with React Native and Flutter</li><li>Payments, maps, push notifications</li><li>App Store and Play Store release</li></ul>
+      <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Flutter</span></div></div>
+    <div class="svc"><span class="num">03</span><h3>Backend &amp; admin panel</h3>
+      <ul><li>APIs that power the site and the app</li><li>Admin panel to manage content and orders</li><li>Logins, roles and secure data</li><li>Payment gateways and integrations</li></ul>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Firebase</span></div></div>
+    <div class="svc"><span class="num">04</span><h3>SEO &amp; growth</h3>
+      <ul><li>Technical SEO and site speed</li><li>Google Business Profile and local search</li><li>Keyword-led pages and content structure</li><li>Analytics and monthly ranking reports</li></ul>
+      <div class="tags"><span class="tag">Search Console</span><span class="tag">GA4</span><span class="tag">Schema</span></div></div>
+  </div>
+</div></section>
+
+<section id="control"><div class="wrap ctrl">
+  <div class="ctrl-l">
+    <span class="kicker red">02 / Your admin panel</span>
+    <h2 class="h2">You control your website and app.</h2>
+    <p class="lead">Every project ships with a simple admin panel. Update prices, accept bookings, reply to enquiries and send offers to your app users without calling a developer. Try it: pick a business and change something.</p>
+    <div class="checks">
+      <div>One login for website and mobile app</div>
+      <div>Changes go live instantly</div>
+      <div>Bookings, leads and payments in one place</div>
+      <div>Staff accounts with their own permissions</div>
+    </div>
+  </div>
+
+  <div class="demo" aria-label="Interactive admin panel demo">
+    <div class="demo-bar">
+      <span class="t" id="d-title">CarePlus Clinic · Admin</span>
+      <div class="seg" role="group" aria-label="Preview">
+        <button aria-pressed="true" data-view="mobile">App preview</button>
+        <button aria-pressed="false" data-view="web">Website preview</button>
+      </div>
+    </div>
+    <div class="industry" role="group" aria-label="Business type">
+      <button aria-pressed="true" data-ind="clinic">Doctor / Clinic</button>
+      <button aria-pressed="false" data-ind="law">Advocate / Law firm</button>
+      <button aria-pressed="false" data-ind="showroom">Car showroom</button>
+    </div>
+    <div class="demo-body">
+      <div class="demo-main">
+        <div class="kpis" id="d-kpis"></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px"><span class="kicker" id="d-list-title" style="font-size:12px">Today's appointments</span><span style="font-size:12px;color:var(--muted)" id="d-count"></span></div>
+          <div class="rows" id="d-rows"></div>
+        </div>
+        <div class="settings">
+          <span class="kicker" style="font-size:12px;margin-bottom:4px">Settings</span>
+          <button class="toggle" role="switch" aria-checked="true" id="t-book"><span id="t-book-l">Accept online bookings</span><span class="sw"></span></button>
+          <button class="toggle" role="switch" aria-checked="false" id="t-offer"><span>Show offer banner on app &amp; website</span><span class="sw"></span></button>
+          <label class="field" style="margin-top:10px"><span id="f-l">Offer text</span><input id="f-offer" value="Free consultation for first visit"></label>
+        </div>
+      </div>
+      <div class="demo-side">
+        <span class="kicker" id="side-k">Live app preview</span>
+        <div class="phone" id="phone">
+          <div class="top"><b id="p-name">CarePlus Clinic</b><span id="p-sub">Dr. Mehta · General physician</span></div>
+          <div class="body">
+            <div class="offer" id="p-offer" hidden></div>
+            <div id="p-items"></div>
+            <div class="cta" id="p-cta">Book appointment →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="industries"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kicker red">03 / Industries</span><h2 class="h2">Built for businesses<br>like yours.</h2></div>
+    <p class="lead">I've built for real estate, food delivery, fintech, sports, logistics and local service businesses. Here's what I typically build for each.</p>
+  </div>
+  <div class="grid g3">
+    <div class="ind"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span><h3>Doctors &amp; clinics</h3><p>Appointment booking, doctor profiles, patient reminders on WhatsApp and SMS, and local SEO so patients nearby find you first.</p></div>
+    <div class="ind"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span><h3>Advocates &amp; law firms</h3><p>Practice-area pages, consultation requests, case and client tracking, document upload and a professional online presence.</p></div>
+    <div class="ind"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 17h6"/></svg></span><h3>Showrooms &amp; dealers</h3><p>Inventory with photos and prices, test-drive booking, lead management for sales staff and offers pushed to the app.</p></div>
+    <div class="ind"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><h3>Real estate</h3><p>Property listings, map search, GIS layers and agent dashboards. Built Estater for Kuwait, Bahrain and Saudi Arabia.</p></div>
+    <div class="ind"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span><h3>Restaurants &amp; delivery</h3><p>Ordering, vendor apps, rider tracking and payments. Worked on WhyQ (Shiok), serving 3,000+ vendors in Singapore.</p></div>
+    <div class="ind"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><h3>Startups &amp; services</h3><p>MVPs, on-demand service apps, CRMs and internal tools, from first version to scale.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kicker red">04 / Selected work</span><h2 class="h2">Products I've built<br>and shipped.</h2></div>
+    <p class="lead">Live websites and apps used by real customers across the Middle East, Southeast Asia, North America and India.</p>
+  </div>
+  <div class="grid g3">
+    <article class="work"><div class="top"><span class="mono">BO</span><span class="tag tag-red">Website · India</span></div><h3>Brave Overseas</h3><p>Website for a government-approved overseas manpower and visa company. Job listings, online booking, enquiries and WhatsApp contact for candidates.</p><div class="tags"><span class="tag">Website</span><span class="tag">SEO</span><span class="tag">Booking</span></div><a class="go" href="https://www.braveoverseas.com/" target="_blank" rel="noopener">Visit website ↗</a></article>
+    <article class="work"><div class="top"><span class="mono">E.</span><span class="tag tag-red">Kuwait · Bahrain · KSA</span></div><h3>Estater</h3><p>GIS-based real estate platform with property data, interactive maps, location layers and parcel-level exploration.</p><div class="tags"><span class="tag">Swift</span><span class="tag">Mapbox</span><span class="tag">GIS</span></div><a class="go" href="#">View on App Store ↗</a></article>
+    <article class="work"><div class="top"><span class="mono">WQ</span><span class="tag tag-red">Singapore</span></div><h3>WhyQ (Shiok)</h3><p>Food delivery platform serving 3,000+ vendors, with ordering, payments and live order tracking.</p><div class="tags"><span class="tag">iOS</span><span class="tag">Payments</span><span class="tag">Realtime</span></div><a class="go" href="#">View on App Store ↗</a></article>
+    <article class="work"><div class="top"><span class="mono">BB</span><span class="tag tag-red">Social</span></div><h3>Bee Bush</h3><p>Social and rewards platform with user profiles, activity feeds and a points-based rewards system.</p><div class="tags"><span class="tag">iOS</span><span class="tag">Rewards</span><span class="tag">Social</span></div><a class="go" href="#">View on App Store ↗</a></article>
+    <article class="work"><div class="top"><span class="mono">SZ</span><span class="tag tag-red">Fleet</span></div><h3>SHAZCOM</h3><p>GPS vehicle tracking with live location, trip history and geo-fencing alerts for fleet owners.</p><div class="tags"><span class="tag">Core Location</span><span class="tag">Maps</span><span class="tag">Geo-fencing</span></div><a class="go" href="#">View on App Store ↗</a></article>
+    <article class="work"><div class="top"><span class="mono">DR</span><span class="tag tag-red">USA</span></div><h3>Drafters</h3><p>Daily fantasy sports platform for US users, with contests, live scoring and secure payments.</p><div class="tags"><span class="tag">SwiftUI</span><span class="tag">Live data</span><span class="tag">Payments</span></div><a class="go" href="#">View on App Store ↗</a></article>
+    <article class="work"><div class="top"><span class="mono">CL</span><span class="tag tag-red">On-demand</span></div><h3>CleanLine</h3><p>On-demand services and logistics platform with booking, scheduling and service-provider management.</p><div class="tags"><span class="tag">iOS</span><span class="tag">Booking</span><span class="tag">Logistics</span></div><a class="go" href="#">View on App Store ↗</a></article>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kicker red">05 / How we work</span><h2 class="h2">Clear steps.<br>No surprises.</h2></div>
+    <p class="lead">You get a fixed quote, a timeline and weekly updates. You see progress on a live link from the first week.</p>
+  </div>
+  <div class="grid g4">
+    <div class="step"><span class="n">01</span><h3>Free call</h3><p>We discuss your business, goals and budget. You get a written proposal within 48 hours.</p></div>
+    <div class="step"><span class="n">02</span><h3>Design</h3><p>Screens for website and app, approved by you before any code is written.</p></div>
+    <div class="step"><span class="n">03</span><h3>Build &amp; launch</h3><p>Website, app, admin panel and backend. I handle hosting, domain and store submission.</p></div>
+    <div class="step"><span class="n">04</span><h3>Grow</h3><p>SEO, analytics, updates and support so your product keeps performing.</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="about-l">
+    <span class="kicker red">06 / About</span>
+    <h2 class="h2">11 years of shipping software.</h2>
+    <p class="lead">I started as a native iOS developer and grew into full-stack work: web frontends, backend services, cloud infrastructure and search optimisation. I've delivered for clients in the US, UK, Canada, Singapore, Kuwait, Bahrain, Saudi Arabia, Dubai and India.</p>
+    <p class="lead">Along with development I've led teams, reviewed code, mentored developers and worked directly with product and business owners. I take ownership from planning and architecture through testing, CI/CD and release.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+      <a class="btn btn-secondary" href="https://linkedin.com/in/vijay-kumar-a901a829a" target="_blank" rel="noopener">LinkedIn profile ↗</a>
+      <a class="btn btn-secondary" href="Vijay-Yadav-Resume.pdf" download>Download resume ↓</a>
+    </div>
+  </div>
+  <dl class="stack" style="margin:0">
+    <dt>Mobile</dt><dd><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">UIKit</span><span class="tag">Objective-C</span><span class="tag">React Native</span><span class="tag">Flutter</span></dd>
+    <dt>Web</dt><dd><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Tailwind CSS</span></dd>
+    <dt>Backend</dt><dd><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST APIs</span><span class="tag">Firebase</span><span class="tag">Auth</span></dd>
+    <dt>Data &amp; cloud</dt><dd><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">Core Data</span><span class="tag">AWS</span><span class="tag">GitHub Actions</span></dd>
+    <dt>SEO</dt><dd><span class="tag">Technical SEO</span><span class="tag">Local SEO</span><span class="tag">Core Web Vitals</span><span class="tag">Schema markup</span></dd>
+    <dt>Integrations</dt><dd><span class="tag">Stripe</span><span class="tag">Razorpay</span><span class="tag">Mapbox</span><span class="tag">Google Maps</span><span class="tag">Push notifications</span></dd>
+  </dl>
+</div></section>
+</main>
+
+<div class="poster" id="contact"><div class="wrap in">
+  <div style="display:flex;flex-direction:column;gap:32px">
+    <span class="kicker">07 / Contact</span>
+    <h2>Have a project?<br><em>Let's build it.</em></h2>
+    <div class="lines">
+      <a href="tel:+919461593557">+91 94615 93557 <span>Call / WhatsApp</span></a>
+      <a href="mailto:vijay18.vishesh@gmail.com">vijay18.vishesh@gmail.com <span>Email</span></a>
+      <a href="https://linkedin.com/in/vijay-kumar-a901a829a" target="_blank" rel="noopener">linkedin.com/in/vijay-kumar <span>LinkedIn</span></a>
+    </div>
+  </div>
+  <form class="quote" id="quote">
+    <span class="kicker">Get a free quote</span>
+    <div class="two">
+      <label class="field">Your name<input name="name" required></label>
+      <label class="field">Phone or email<input name="contact" required></label>
+    </div>
+    <div class="field">What do you need?
+      <div class="chips">
+        <label><input type="checkbox" name="need" value="Website" checked><span>Website</span></label>
+        <label><input type="checkbox" name="need" value="Mobile app"><span>Mobile app</span></label>
+        <label><input type="checkbox" name="need" value="Admin panel"><span>Admin panel</span></label>
+        <label><input type="checkbox" name="need" value="SEO"><span>SEO</span></label>
+      </div>
+    </div>
+    <label class="field">Business type
+      <select name="biz"><option>Doctor / Clinic</option><option>Advocate / Law firm</option><option>Showroom / Dealer</option><option>Real estate</option><option>Restaurant / Delivery</option><option>Startup / Other</option></select>
+    </label>
+    <label class="field">Tell me a little about it<textarea name="msg" placeholder="What should it do? Any deadline?"></textarea></label>
+    <button class="btn btn-primary" type="submit">Send enquiry ↗</button>
+  </form>
+</div></div>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> Vijay Yadav · Full-stack developer · Jaipur, India</span><a href="#top">Back to top ↑</a></div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var root=document.documentElement,tb=$('#theme');
+  var SUN='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>';
+  var MOON='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+  function setTheme(t){root.dataset.theme=t;tb.innerHTML=t==='dark'?SUN:MOON}
+  var saved=null;try{saved=localStorage.getItem('vjy-theme')}catch(e){}
+  setTheme(saved||'dark');
+  tb.addEventListener('click',function(){var t=root.dataset.theme==='dark'?'light':'dark';setTheme(t);try{localStorage.setItem('vjy-theme',t)}catch(e){}});
+
+  var mb=$('.menu-btn'),mm=$('.mobile-menu');
+  mb.addEventListener('click',function(){var o=mm.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');mb.setAttribute('aria-expanded',false)})});
+
+  var toastT;function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show')},2200)}
+
+  var D={
+    clinic:{name:'CarePlus Clinic',sub:'Dr. Mehta · General physician',list:"Today's appointments",book:'Accept online bookings',cta:'Book appointment',offer:'Free consultation for first visit',
+      kpis:[['18','Appointments today'],['42','New patients this month'],['4.8','Google rating']],
+      rows:[['Anita Sharma','10:30 · Follow-up','new'],['Rahul Verma','11:15 · Fever, cough','new'],['Priya Nair','12:00 · Blood report','ok'],['Imran Khan','16:30 · Consultation','ok']],
+      items:[['General consultation','₹500'],['Health check-up','₹1,499'],['Teleconsultation','₹400']],okLabel:'Confirm',done:'Confirmed'},
+    law:{name:'Singh & Associates',sub:'Adv. R. Singh · Civil & property law',list:'New consultation requests',book:'Accept consultation requests',cta:'Request consultation',offer:'First 15-minute call free',
+      kpis:[['7','New enquiries'],['23','Active cases'],['3','Hearings this week']],
+      rows:[['Meera Joshi','Property dispute · Jaipur','new'],['Arjun Patel','Divorce consultation','new'],['K. Agarwal','Rent agreement review','ok'],['Sunita Rao','Cheque bounce notice','ok']],
+      items:[['Civil litigation','Enquire'],['Property & registry','Enquire'],['Family law','Enquire']],okLabel:'Schedule',done:'Scheduled'},
+    showroom:{name:'Prime Motors',sub:'Authorised dealer · Jaipur',list:'Test-drive leads',book:'Accept test-drive bookings',cta:'Book a test drive',offer:'Year-end offer: ₹40,000 off',
+      kpis:[['31','Leads this week'],['9','Test drives today'],['86','Cars in stock']],
+      rows:[['Vikram Singh','SUV · Test drive 11:00','new'],['Neha Gupta','Hatchback · Price quote','new'],['Deepak Jain','Sedan · Exchange offer','ok'],['Farah Ali','EV · Test drive 15:30','ok']],
+      items:[['Compact SUV','₹9.4 L'],['Sedan','₹11.2 L'],['Electric hatch','₹12.9 L']],okLabel:'Call back',done:'Called'}
+  };
+  var cur='clinic',view='mobile',booking=true,offerOn=false;
+
+  function renderPhone(){
+    var d=D[cur];
+    $('#p-name').textContent=d.name;$('#p-sub').textContent=d.sub;
+    var o=$('#p-offer');o.hidden=!offerOn;o.textContent=$('#f-offer').value||d.offer;
+    $('#p-items').innerHTML=d.items.map(function(i){return '<div class="item"><span>'+i[0]+'</span><b>'+i[1]+'</b></div>'}).join('');
+    var c=$('#p-cta');c.textContent=booking?d.cta+' →':'Bookings paused';c.classList.toggle('off',!booking);
+    var p=$('#phone');
+    $('.demo-body').classList.toggle('web',view==='web');
+    if(view==='web'){p.style.width='100%';p.style.minHeight='300px';p.style.borderWidth='2px';p.style.borderRadius='14px';$('#side-k').textContent='Live website preview'}
+    else{p.style.width='214px';p.style.minHeight='420px';p.style.borderWidth='7px';p.style.borderRadius='34px';$('#side-k').textContent='Live app preview'}
+  }
+  function render(){
+    var d=D[cur];
+    $('#d-title').textContent=d.name+' · Admin';
+    $('#d-kpis').innerHTML=d.kpis.map(function(k){return '<div><div class="v">'+k[0]+'</div><div class="l">'+k[1]+'</div></div>'}).join('');
+    $('#d-list-title').textContent=d.list;
+    $('#d-rows').innerHTML=d.rows.map(function(r,i){
+      var isNew=r[2]==='new';
+      return '<div class="row"><div><div class="who">'+r[0]+'</div><div class="what">'+r[1]+'</div></div><span class="st'+(isNew?' new':'')+'">'+(isNew?'New':d.done)+'</span><button class="act" data-i="'+i+'"'+(isNew?'':' disabled')+'>'+d.okLabel+'</button></div>';
+    }).join('');
+    $('#d-count').textContent=d.rows.filter(function(r){return r[2]==='new'}).length+' need action';
+    $('#t-book-l').textContent=d.book;
+    $('#f-offer').value=d.offer;
+    renderPhone();
+  }
+  $('#d-rows').addEventListener('click',function(e){
+    var b=e.target.closest('.act');if(!b||b.disabled)return;
+    var d=D[cur];d.rows[+b.dataset.i][2]='ok';render();toast(d.done+' · customer notified by SMS');
+  });
+  document.querySelectorAll('[data-ind]').forEach(function(b){b.addEventListener('click',function(){
+    cur=b.dataset.ind;document.querySelectorAll('[data-ind]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});render();
+  })});
+  document.querySelectorAll('[data-view]').forEach(function(b){b.addEventListener('click',function(){
+    view=b.dataset.view;document.querySelectorAll('[data-view]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});renderPhone();
+  })});
+  $('#t-book').addEventListener('click',function(){booking=!booking;this.setAttribute('aria-checked',booking);renderPhone();toast(booking?'Bookings turned on':'Bookings paused on app & website')});
+  $('#t-offer').addEventListener('click',function(){offerOn=!offerOn;this.setAttribute('aria-checked',offerOn);renderPhone();if(offerOn)toast('Offer is live on app & website')});
+  $('#f-offer').addEventListener('input',function(){D[cur].offer=this.value;renderPhone()});
+  render();
+
+  $('#quote').addEventListener('submit',function(e){
+    e.preventDefault();var f=new FormData(this);
+    var body='Name: '+f.get('name')+'\nContact: '+f.get('contact')+'\nNeeds: '+f.getAll('need').join(', ')+'\nBusiness: '+f.get('biz')+'\n\n'+f.get('msg');
+    location.href='mailto:vijay18.vishesh@gmail.com?subject='+encodeURIComponent('Project enquiry from '+f.get('name'))+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
