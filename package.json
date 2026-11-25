@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf out && cp -R site out",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:next": "next build"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
