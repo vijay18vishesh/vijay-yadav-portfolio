@@ -440,7 +440,9 @@ footer .wrap{flex-direction:column}
       <select name="biz"><option>Doctor / Clinic</option><option>Advocate / Law firm</option><option>Showroom / Dealer</option><option>Real estate</option><option>Restaurant / Delivery</option><option>Startup / Other</option></select>
     </label>
     <label class="field">Tell me a little about it<textarea name="msg" placeholder="What should it do? Any deadline?"></textarea></label>
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
     <button class="btn btn-primary" type="submit">Send enquiry ↗</button>
+    <p id="q-status" role="status" aria-live="polite" style="font-size:14px;font-weight:600" hidden></p>
   </form>
 </div></div>
 
@@ -521,10 +523,30 @@ footer .wrap{flex-direction:column}
   $('#f-offer').addEventListener('input',function(){D[cur].offer=this.value;renderPhone()});
   render();
 
+  // Web3Forms access key (https://web3forms.com). Enquiries are emailed to the address the key was created with.
+  var WEB3FORMS_KEY='bed79fdd-6a96-455a-89bc-98747e77e018';
+  var MAIL='vijay18.vishesh@gmail.com';
   $('#quote').addEventListener('submit',function(e){
-    e.preventDefault();var f=new FormData(this);
-    var body='Name: '+f.get('name')+'\nContact: '+f.get('contact')+'\nNeeds: '+f.getAll('need').join(', ')+'\nBusiness: '+f.get('biz')+'\n\n'+f.get('msg');
-    location.href='mailto:vijay18.vishesh@gmail.com?subject='+encodeURIComponent('Project enquiry from '+f.get('name'))+'&body='+encodeURIComponent(body);
+    e.preventDefault();
+    var form=this,f=new FormData(form),btn=form.querySelector('button[type=submit]'),st=$('#q-status');
+    if(f.get('botcheck'))return;
+    var contact=String(f.get('contact')||'').trim();
+    var body='Name: '+f.get('name')+'\nContact: '+contact+'\nNeeds: '+(f.getAll('need').join(', ')||'-')+'\nBusiness: '+f.get('biz')+'\n\n'+(f.get('msg')||'');
+    var subject='Project enquiry from '+f.get('name');
+    if(WEB3FORMS_KEY.indexOf('YOUR_')===0){location.href='mailto:'+MAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);return}
+    var data={access_key:WEB3FORMS_KEY,subject:subject,from_name:'vijayyadav.app',name:f.get('name'),contact:contact,needs:f.getAll('need').join(', '),business:f.get('biz'),message:f.get('msg')};
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact))data.email=contact;
+    btn.disabled=true;btn.textContent='Sending…';st.hidden=true;
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json()})
+      .then(function(r){
+        if(!r.success)throw new Error(r.message||'Failed');
+        form.reset();st.style.color='var(--accent)';st.textContent='Thanks! Your enquiry has been sent. I\'ll get back to you within 24 hours.';st.hidden=false;toast('Enquiry sent ✓');
+      })
+      .catch(function(){
+        st.style.color='var(--muted)';st.innerHTML='Sorry, that didn\'t go through. Please email <a href="mailto:'+MAIL+'" style="color:var(--accent)">'+MAIL+'</a> or WhatsApp <a href="https://wa.me/919461593557" style="color:var(--accent)">+91 94615 93557</a>.';st.hidden=false;
+      })
+      .finally(function(){btn.disabled=false;btn.textContent='Send enquiry ↗'});
   });
 })();
 </script>
