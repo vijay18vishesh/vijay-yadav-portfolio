@@ -7,6 +7,12 @@
 <meta name="description" content="Vijay Yadav, full-stack developer with 11+ years of experience. Websites, iOS and Android apps, admin panels and SEO for clinics, law firms, showrooms and growing businesses.">
 <meta property="og:title" content="Vijay Yadav — Full-Stack Developer">
 <meta property="og:description" content="Websites, mobile apps, admin panels and SEO. 11+ years, clients in 9 countries.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#090b10">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Vijay Yadav — Full-Stack Developer","description":"Websites, iOS and Android apps, admin panels and SEO for clinics, law firms, showrooms and growing businesses.","telephone":"+91-9461593557","email":"vijay18.vishesh@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Jaipur","addressRegion":"Rajasthan","addressCountry":"IN"},"areaServed":["IN","US","GB","CA","SG","AE","SA","KW","BH"],"priceRange":"₹19,990+","founder":{"@type":"Person","name":"Vijay Yadav","jobTitle":"Full-Stack Developer","sameAs":["https://www.linkedin.com/in/vijay-yadav-a901a829a/"]}}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a website cost?", "acceptedAnswer": {"@type": "Answer", "text": "Starter websites begin at ₹19,990 and mobile apps at ₹49,000. Business websites and web applications are quoted on scope. Use the cost estimator above for a rough figure, then send me your requirements for an exact written quote."}}, {"@type": "Question", "name": "How long does a project take?", "acceptedAnswer": {"@type": "Answer", "text": "A starter website usually takes 1–2 weeks. Business websites take 3–5 weeks, and apps or custom web applications take 6–12 weeks depending on features. You get a timeline with the proposal and a live preview link from the first week."}}, {"@type": "Question", "name": "Will I be able to update the website myself?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Business websites and apps come with an admin panel where you can edit content, prices, offers and bookings without calling a developer. I also give you a short training session at handover."}}, {"@type": "Question", "name": "Do you provide hosting, domain and maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "I can set up hosting and your domain in your name, so you always own them. Hosting, domain and ongoing maintenance are quoted separately, and monthly maintenance plans are available after launch."}}, {"@type": "Question", "name": "Can you guarantee a first-page Google ranking?", "acceptedAnswer": {"@type": "Answer", "text": "No honest developer can guarantee a ranking. What I do is build a fast, technically sound site with the right page structure, set up Search Console, Analytics and your Google Business Profile, and report on progress every month."}}, {"@type": "Question", "name": "Do you work with clients outside India?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I have delivered projects for clients in the US, UK, Canada, Singapore, Dubai, Saudi Arabia, Kuwait and Bahrain. We work over WhatsApp, email and video calls, and I adjust meeting times to your time zone."}}, {"@type": "Question", "name": "How do payments work?", "acceptedAnswer": {"@type": "Answer", "text": "Usually 40% to start, 40% after design and main build approval, and 20% at launch. Larger projects can be split into milestones. Bank transfer, UPI and international payments are accepted."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -223,15 +229,94 @@ form.quote .btn{width:100%}
 .about-l .btn{flex:1}
 footer .wrap{flex-direction:column}
 }
+
+/* Added: packages, SEO launch plan and industry demo gallery */
+.package{padding:30px;display:flex;flex-direction:column;gap:16px;min-height:390px;position:relative}
+.package.featured{border-color:var(--accent);box-shadow:0 15px 45px var(--glow)}
+.package .price{font-size:27px;font-weight:800;letter-spacing:-.03em}
+.package .price small{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:0}
+.package ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;color:var(--muted);font-size:14px}
+.package li:before{content:'✓  ';color:var(--accent);font-weight:800}
+.package .btn{margin-top:auto;align-self:flex-start}
+.price-tagline{display:flex;flex-wrap:wrap;gap:10px;margin-top:-8px}
+.price-tagline span{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px;font-weight:700;color:var(--text)}
+.price-tagline strong{color:var(--accent);font-size:15px}
+.price-note{font-size:12px;color:var(--muted);margin-top:-5px}
+.seo-plan{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.seo-panel{padding:28px;background:var(--surface);border:1px solid var(--line);border-radius:22px}
+.seo-panel ul{padding-left:20px;margin:16px 0 0;color:var(--muted);display:grid;gap:10px}
+.seo-note{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:13px}
+.demo-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px}
+.site-demo{overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:20px;transition:transform .2s,border-color .2s}
+.site-demo:hover{transform:translateY(-4px);border-color:var(--accent)}
+.site-preview{height:178px;padding:13px;background:var(--surface2);overflow:hidden}
+.mock-site{height:100%;border-radius:10px;background:#fff;color:#182033;padding:12px;display:flex;flex-direction:column;gap:9px;overflow:hidden}
+.mock-nav{display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:800;border-bottom:1px solid #e8ebf0;padding-bottom:8px}
+.mock-pill{background:#edf7e5;color:#31551b;padding:5px 8px;border-radius:5px;font-size:9px;font-weight:800;align-self:flex-start}
+.mock-title{font-size:18px;line-height:1.08;font-weight:900;letter-spacing:-.04em;max-width:85%}
+.mock-lines{display:grid;gap:5px}.mock-lines i{height:5px;background:#e9edf2;border-radius:9px;width:90%}.mock-lines i:nth-child(2){width:70%}.mock-lines i:nth-child(3){width:52%}
+.mock-action{margin-top:auto;background:#182033;color:#fff;border-radius:5px;padding:7px 9px;font-size:9px;font-weight:800;align-self:flex-start}
+.site-demo-body{padding:19px;display:flex;flex-direction:column;gap:10px}
+.site-demo-body h3{font-size:18px;line-height:1.2}
+.site-demo-body p{font-size:13px;color:var(--muted)}
+.site-demo-body .tags{display:flex;flex-wrap:wrap;gap:5px}
+.demo-modal{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.demo-modal.open{display:flex}
+.demo-modal-card{width:min(680px,100%);max-height:90vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+.demo-modal-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.demo-modal-preview{background:#fff;color:#182033;border-radius:16px;padding:24px;min-height:250px;display:flex;flex-direction:column;gap:14px}
+.demo-modal-preview h3{font-size:clamp(25px,5vw,40px);line-height:1.05;max-width:520px}
+.demo-modal-preview p{color:#596579;max-width:520px}
+.demo-modal-preview .mock-action{font-size:12px;padding:11px 15px}
+@media(max-width:720px){.seo-plan{grid-template-columns:1fr}.package{min-height:0}.demo-modal-card{padding:18px}}
+
+
+/* Added: estimator, FAQ, WhatsApp button, progress bar, reveal, active nav */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:60;transition:width .1s linear}
+.links a.active{color:var(--text);box-shadow:inset 0 -2px 0 var(--accent)}
+.est{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:18px;align-items:start}
+.est-panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:22px}
+.est-panel h3{font-size:15px;font-weight:700;margin-bottom:10px}
+.est-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.est-types label{cursor:pointer;position:relative}
+.est-types input{position:absolute;opacity:0;pointer-events:none}
+.est-types span{display:flex;flex-direction:column;gap:2px;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--bg);font-weight:700;font-size:14px;height:100%}
+.est-types small{font-weight:500;color:var(--muted);font-size:12px}
+.est-types input:checked+span{border-color:var(--accent);box-shadow:0 0 0 3px var(--glow)}
+.est-types input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.est-range{display:flex;align-items:center;gap:14px}
+.est-range input{flex:1;accent-color:var(--accent)}
+.est-range output{font-weight:800;min-width:72px;text-align:right}
+.est-result{position:sticky;top:100px;background:var(--surface);border:1px solid var(--accent);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 15px 45px var(--glow)}
+.est-result .big{font-size:clamp(30px,3.4vw,44px);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+.est-result dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px}
+.est-result dt{color:var(--muted)}
+.est-result dd{margin:0;font-weight:700;text-align:right}
+.faq{display:grid;gap:10px;max-width:900px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:0 24px;transition:border-color .2s}
+.faq details[open]{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:700;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:22px;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted);font-size:15px}
+.wa{position:fixed;right:20px;bottom:20px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.35);transition:transform .15s}
+.wa:hover{transform:scale(1.08);color:#fff}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+@media (max-width:900px){.est{grid-template-columns:1fr}.est-result{position:static}}
+@media (max-width:640px){.est-panel,.est-result{padding:20px}.wa{right:14px;bottom:14px;width:50px;height:50px}.faq details{padding:0 18px}.faq summary{font-size:15.5px}}
 </style>
 </head>
 <body>
 
+<div class="progress" id="progress" aria-hidden="true"></div>
 <header class="nav">
   <div class="wrap nav-in">
     <a href="#top" class="brand"><b>VY</b>Vijay Yadav</a>
     <nav class="links">
-      <a href="#services">Services</a><a href="#control">Admin panel</a><a href="#industries">Industries</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a>
+      <a href="#services">Services</a><a href="#packages">Packages</a><a href="#estimate">Estimate</a><a href="#demos">Live demos</a><a href="#control">Admin panel</a><a href="#work">Work</a><a href="#about">About</a><a href="#faq">FAQ</a>
     </nav>
     <div class="nav-r">
     <button class="icon-btn" id="theme" aria-label="Toggle color theme"></button>
@@ -242,7 +327,7 @@ footer .wrap{flex-direction:column}
     </div>
   </div>
   <div class="mobile-menu">
-    <a href="#services">Services</a><a href="#control">Admin panel</a><a href="#industries">Industries</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact" style="color:var(--accent)">Start a project →</a>
+    <a href="#services">Services</a><a href="#packages">Packages</a><a href="#demos">Live demos</a><a href="#seo-start">SEO setup</a><a href="#control">Admin panel</a><a href="#industries">Industries</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#estimate">Cost estimator</a><a href="#faq">FAQ</a><a href="#contact" style="color:var(--accent)">Start a project →</a>
   </div>
 </header>
 
@@ -253,6 +338,8 @@ footer .wrap{flex-direction:column}
       <div class="pill"><span class="dot"></span>Full-stack developer · Available for new projects</div>
       <h1>Websites, apps and SEO that bring you <em>customers.</em></h1>
       <p class="lead">I'm Vijay Yadav, a full-stack developer with 11+ years of experience. I design and build your website, your iOS and Android app, and the admin panel you use to run them. Then I make sure people find you on Google.</p>
+      <div class="price-tagline" aria-label="Starting prices"><span>Websites from <strong>₹19,990</strong></span><span>Mobile apps from <strong>₹49,000</strong></span></div>
+      <p class="price-note">Starting prices for defined project scopes. Final quote depends on features and requirements.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <a href="#contact" class="btn btn-primary" style="min-width:230px">Get a free quote ↗</a>
         <a href="#control" class="btn btn-secondary">Try the admin panel</a>
@@ -291,9 +378,83 @@ footer .wrap{flex-direction:column}
   </div>
 </div></section>
 
+<section id="packages"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kicker red">02 / Website development packages</span><h2 class="h2">A clear starting point<br>for every business.</h2></div>
+    <p class="lead">Choose the level of website you need. Final scope, timeline and price are confirmed after understanding your pages, features and integrations.</p>
+  </div>
+  <div class="grid g4">
+    <article class="package"><span class="tag">Launch</span><h3>Starter website</h3><div class="price">₹19,990+ <small>/ one-time project</small></div><p class="lead">A clean, professional online presence for a new or local business.</p><ul><li>Up to 5 core pages</li><li>Responsive mobile-first design</li><li>Contact form and WhatsApp link</li><li>Basic on-page SEO setup</li><li>Google Analytics and Search Console setup guidance</li><li>Deployment and handover</li></ul><a class="btn btn-secondary package-cta" href="#contact" data-package="Starter website">Enquire about Starter ↗</a></article>
+    <article class="package featured"><span class="tag tag-red">Popular choice</span><h3>Business website</h3><div class="price">Custom quote <small>/ one-time project</small></div><p class="lead">For businesses that need leads, bookings, service pages and room to grow.</p><ul><li>Up to 10–15 pages, based on scope</li><li>Custom design and service pages</li><li>Enquiry, booking or appointment flow</li><li>Admin panel for editable content</li><li>Technical SEO, sitemap and schema where relevant</li><li>Analytics events and conversion tracking</li><li>Deployment, training and handover</li></ul><a class="btn btn-primary package-cta" href="#contact" data-package="Business website">Enquire about Business ↗</a></article>
+    <article class="package"><span class="tag">Advanced</span><h3>Custom web application</h3><div class="price">Custom quote <small>/ scoped project</small></div><p class="lead">For businesses that need workflows, accounts, dashboards or integrations.</p><ul><li>Custom pages and user journeys</li><li>Secure login and role-based access</li><li>Backend, database and API development</li><li>Customer or staff dashboard</li><li>Payments and third-party integrations</li><li>Testing, deployment and documentation</li><li>Optional maintenance and growth support</li></ul><a class="btn btn-secondary package-cta" href="#contact" data-package="Custom web application">Discuss your application ↗</a></article>
+    <article class="package featured"><span class="tag tag-red">Mobile development</span><h3>Mobile application</h3><div class="price">₹49,000+ <small>/ starting project price</small></div><p class="lead">A practical starting point for an iOS or Android app with a clearly defined feature set.</p><ul><li>iOS or Android app development</li><li>Clean, user-friendly interface</li><li>API integration where required</li><li>Basic user flows and app navigation</li><li>Testing on supported devices</li><li>Build and release guidance</li><li>Additional features scoped separately</li></ul><a class="btn btn-primary package-cta" href="#contact" data-package="Mobile application">Enquire about Mobile App ↗</a></article>
+  </div>
+  <p class="seo-note">Hosting, domain, paid third-party services, content creation, photography and ongoing maintenance are quoted separately when required. No fixed price or ranking guarantee is implied; every quote is based on the agreed scope.</p>
+</div></section>
+
+<section id="estimate"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kicker red">03 / Cost estimator</span><h2 class="h2">Get a rough price<br>in 30 seconds.</h2></div>
+    <p class="lead">Pick what you need and see an estimated budget and timeline. Send it to me and I'll reply with an exact quote.</p>
+  </div>
+  <div class="est">
+    <form class="est-panel" id="est-form" onsubmit="return false">
+      <div><h3>1. What are you building?</h3>
+        <div class="est-types">
+          <label><input type="radio" name="etype" value="starter" checked><span>Starter website<small>Up to 5 pages</small></span></label>
+          <label><input type="radio" name="etype" value="business"><span>Business website<small>Leads &amp; bookings</small></span></label>
+          <label><input type="radio" name="etype" value="webapp"><span>Web application<small>Logins &amp; dashboards</small></span></label>
+          <label><input type="radio" name="etype" value="mobile"><span>Mobile app<small>iOS or Android</small></span></label>
+        </div></div>
+      <div><h3 id="est-size-l">2. Number of pages</h3>
+        <div class="est-range"><input type="range" id="est-size" min="1" max="30" value="5" aria-labelledby="est-size-l"><output id="est-size-o">5</output></div></div>
+      <div><h3>3. Add-ons</h3>
+        <div class="chips" id="est-addons">
+          <label><input type="checkbox" value="admin"><span>Admin panel</span></label>
+          <label><input type="checkbox" value="booking"><span>Booking / appointments</span></label>
+          <label><input type="checkbox" value="payments"><span>Online payments</span></label>
+          <label><input type="checkbox" value="both"><span>Both iOS &amp; Android</span></label>
+          <label><input type="checkbox" value="lang"><span>Multiple languages</span></label>
+          <label><input type="checkbox" value="seo"><span>SEO setup (3 months)</span></label>
+          <label><input type="checkbox" value="design"><span>Premium custom design</span></label>
+        </div></div>
+    </form>
+    <aside class="est-result" aria-live="polite">
+      <span class="kicker">Estimated budget</span>
+      <div class="big" id="est-price">₹19,990 – ₹27,000</div>
+      <dl><dt>Timeline</dt><dd id="est-time">1–2 weeks</dd><dt>Includes</dt><dd id="est-inc">Design, build, launch</dd></dl>
+      <p style="font-size:12.5px;color:var(--muted)">A rough guide only. The final quote depends on your exact scope and is confirmed in writing before work begins.</p>
+      <a href="#contact" class="btn btn-primary" id="est-send">Send me this estimate ↗</a>
+    </aside>
+  </div>
+</div></section>
+
+<section id="seo-start"><div class="wrap">
+  <div class="sec-head"><div><span class="kicker red">04 / Priority 1 — Start here</span><h2 class="h2">Build the right foundation<br>before chasing traffic.</h2></div><p class="lead">A practical launch checklist for a website that people can use, search engines can understand and you can measure.</p></div>
+  <div class="seo-plan">
+    <div class="seo-panel"><span class="tag tag-red">Before launch</span><h3 style="font-size:22px;margin-top:12px">Website essentials</h3><ul><li>Mobile-friendly layout and accessible navigation</li><li>Fast page loading and image optimisation</li><li>HTTPS, working forms and clear contact details</li><li>Unique page titles, meta descriptions and headings</li><li>Useful original copy for each service and location</li><li>Clean URLs, internal links and a custom 404 page</li></ul></div>
+    <div class="seo-panel"><span class="tag tag-red">After launch</span><h3 style="font-size:22px;margin-top:12px">Google visibility setup</h3><ul><li>Verify the domain in Google Search Console</li><li>Publish and submit an XML sitemap</li><li>Check indexing and fix crawl errors</li><li>Set up Google Analytics 4 and enquiry conversion events</li><li>Add relevant structured data where eligible</li><li>For local businesses, complete and maintain a Google Business Profile</li></ul></div>
+  </div>
+  <p class="seo-note">SEO takes time and depends on competition, content quality, authority and technical health. These steps improve readiness and measurement; they do not guarantee a particular Google position or a fixed amount of traffic.</p>
+</div></section>
+
+<section id="demos"><div class="wrap">
+  <div class="sec-head"><div><span class="kicker red">05 / Industry-specific demo websites</span><h2 class="h2">Explore eight demo concepts<br>built for real businesses.</h2></div><p class="lead">These original sample previews show how a business website could look and work. Select any demo to open a larger interactive-style preview.</p></div>
+  <div class="demo-gallery" id="industry-demos">
+    <article class="site-demo" data-demo="clinic"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>CAREPLUS</b><span>Doctors　Services　Contact</span></div><span class="mock-pill">Appointments open</span><div class="mock-title">Care that puts you first.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">BOOK APPOINTMENT</span></div></div><div class="site-demo-body"><h3>Doctor &amp; clinic</h3><p>Doctor profiles, treatments, appointment requests, patient FAQs and location details.</p><div class="tags"><span class="tag">Appointments</span><span class="tag">Doctor profiles</span></div><button class="act open-demo" data-demo="clinic">Preview demo ↗</button></div></article>
+    <article class="site-demo" data-demo="law"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>LEX &amp; CO.</b><span>Practice　Team　Contact</span></div><span class="mock-pill">Trusted legal guidance</span><div class="mock-title">Clear advice. Strong representation.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">BOOK A CONSULTATION</span></div></div><div class="site-demo-body"><h3>Advocate &amp; law firm</h3><p>Practice-area pages, lawyer profiles, consultation enquiries and legal resources.</p><div class="tags"><span class="tag">Practice areas</span><span class="tag">Enquiries</span></div><button class="act open-demo" data-demo="law">Preview demo ↗</button></div></article>
+    <article class="site-demo" data-demo="showroom"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>PRIME MOTORS</b><span>Cars　Offers　Visit us</span></div><span class="mock-pill">Explore the latest range</span><div class="mock-title">Find the car that moves you.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">BOOK A TEST DRIVE</span></div></div><div class="site-demo-body"><h3>Car &amp; bike showroom</h3><p>Vehicle catalogue, variant details, enquiry forms, finance information and test-drive leads.</p><div class="tags"><span class="tag">Inventory</span><span class="tag">Test drives</span></div><button class="act open-demo" data-demo="showroom">Preview demo ↗</button></div></article>
+    <article class="site-demo" data-demo="realestate"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>HOMESCAPE</b><span>Buy　Rent　Locations</span></div><span class="mock-pill">Homes selected for you</span><div class="mock-title">Your next chapter starts at home.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">EXPLORE PROPERTIES</span></div></div><div class="site-demo-body"><h3>Real estate</h3><p>Property listings, filters, map-based discovery, agent profiles and viewing requests.</p><div class="tags"><span class="tag">Property search</span><span class="tag">Maps</span></div><button class="act open-demo" data-demo="realestate">Preview demo ↗</button></div></article>
+    <article class="site-demo" data-demo="restaurant"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>THE LOCAL TABLE</b><span>Menu　Story　Order</span></div><span class="mock-pill">Freshly made today</span><div class="mock-title">Good food. Good company.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">VIEW MENU</span></div></div><div class="site-demo-body"><h3>Restaurant &amp; café</h3><p>Digital menu, table enquiries, opening hours, location and order links.</p><div class="tags"><span class="tag">Menu</span><span class="tag">Reservations</span></div><button class="act open-demo" data-demo="restaurant">Preview demo ↗</button></div></article>
+    <article class="site-demo" data-demo="hotel"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>THE HAVEN</b><span>Rooms　Amenities　Stay</span></div><span class="mock-pill">A stay worth remembering</span><div class="mock-title">Make room for a better getaway.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">CHECK AVAILABILITY</span></div></div><div class="site-demo-body"><h3>Hotel &amp; hospitality</h3><p>Room and amenity pages, enquiry or booking flow, gallery and guest information.</p><div class="tags"><span class="tag">Rooms</span><span class="tag">Booking enquiry</span></div><button class="act open-demo" data-demo="hotel">Preview demo ↗</button></div></article>
+    <article class="site-demo" data-demo="salon"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>STUDIO NINE</b><span>Services　Team　Book</span></div><span class="mock-pill">Appointments available</span><div class="mock-title">A little time, just for you.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">BOOK YOUR SLOT</span></div></div><div class="site-demo-body"><h3>Salon &amp; beauty</h3><p>Service and price list, stylist profiles, gallery, appointment requests and offers.</p><div class="tags"><span class="tag">Service menu</span><span class="tag">Appointments</span></div><button class="act open-demo" data-demo="salon">Preview demo ↗</button></div></article>
+    <article class="site-demo" data-demo="education"><div class="site-preview"><div class="mock-site"><div class="mock-nav"><b>BRIGHTPATH</b><span>Courses　Faculty　Apply</span></div><span class="mock-pill">Learn at your pace</span><div class="mock-title">Skills for the future start here.</div><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action">EXPLORE COURSES</span></div></div><div class="site-demo-body"><h3>School &amp; education</h3><p>Courses, faculty profiles, admissions enquiries, notices and student resources.</p><div class="tags"><span class="tag">Courses</span><span class="tag">Admissions</span></div><button class="act open-demo" data-demo="education">Preview demo ↗</button></div></article>
+  </div>
+</div></section>
+
 <section id="control"><div class="wrap ctrl">
   <div class="ctrl-l">
-    <span class="kicker red">02 / Your admin panel</span>
+    <span class="kicker red">06 / Your admin panel</span>
     <h2 class="h2">You control your website and app.</h2>
     <p class="lead">Every project ships with a simple admin panel. Update prices, accept bookings, reply to enquiries and send offers to your app users without calling a developer. Try it: pick a business and change something.</p>
     <div class="checks">
@@ -348,7 +509,7 @@ footer .wrap{flex-direction:column}
 
 <section id="industries"><div class="wrap">
   <div class="sec-head">
-    <div><span class="kicker red">03 / Industries</span><h2 class="h2">Built for businesses<br>like yours.</h2></div>
+    <div><span class="kicker red">07 / Industries</span><h2 class="h2">Built for businesses<br>like yours.</h2></div>
     <p class="lead">I've built for real estate, food delivery, fintech, sports, logistics and local service businesses. Here's what I typically build for each.</p>
   </div>
   <div class="grid g3">
@@ -363,7 +524,7 @@ footer .wrap{flex-direction:column}
 
 <section id="work"><div class="wrap">
   <div class="sec-head">
-    <div><span class="kicker red">04 / Selected work</span><h2 class="h2">Products I've built<br>and shipped.</h2></div>
+    <div><span class="kicker red">08 / Selected work</span><h2 class="h2">Products I've built<br>and shipped.</h2></div>
     <p class="lead">Live websites and apps used by real customers across the Middle East, Southeast Asia, North America and India.</p>
   </div>
   <div class="grid g3">
@@ -381,7 +542,7 @@ footer .wrap{flex-direction:column}
 
 <section id="process"><div class="wrap">
   <div class="sec-head">
-    <div><span class="kicker red">05 / How we work</span><h2 class="h2">Clear steps.<br>No surprises.</h2></div>
+    <div><span class="kicker red">09 / How we work</span><h2 class="h2">Clear steps.<br>No surprises.</h2></div>
     <p class="lead">You get a fixed quote, a timeline and weekly updates. You see progress on a live link from the first week.</p>
   </div>
   <div class="grid g4">
@@ -394,7 +555,7 @@ footer .wrap{flex-direction:column}
 
 <section id="about"><div class="wrap about">
   <div class="about-l">
-    <span class="kicker red">06 / About</span>
+    <span class="kicker red">10 / About</span>
     <h2 class="h2">11 years of shipping software.</h2>
     <p class="lead">I started as a native iOS developer and grew into full-stack work: web frontends, backend services, cloud infrastructure and search optimisation. I've delivered for clients in the US, UK, Canada, Singapore, Kuwait, Bahrain, Saudi Arabia, Dubai and India.</p>
     <p class="lead">Along with development I've led teams, reviewed code, mentored developers and worked directly with product and business owners. I take ownership from planning and architecture through testing, CI/CD and release.</p>
@@ -412,11 +573,26 @@ footer .wrap{flex-direction:column}
     <dt>Integrations</dt><dd><span class="tag">Stripe</span><span class="tag">Razorpay</span><span class="tag">Mapbox</span><span class="tag">Google Maps</span><span class="tag">Push notifications</span></dd>
   </dl>
 </div></section>
+<section id="faq"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kicker red">11 / FAQ</span><h2 class="h2">Questions clients<br>usually ask.</h2></div>
+    <p class="lead">Can't find your answer? Message me on WhatsApp and I'll reply the same day.</p>
+  </div>
+  <div class="faq">
+    <details><summary>How much does a website cost?</summary><p>Starter websites begin at ₹19,990 and mobile apps at ₹49,000. Business websites and web applications are quoted on scope. Use the cost estimator above for a rough figure, then send me your requirements for an exact written quote.</p></details>
+    <details><summary>How long does a project take?</summary><p>A starter website usually takes 1–2 weeks. Business websites take 3–5 weeks, and apps or custom web applications take 6–12 weeks depending on features. You get a timeline with the proposal and a live preview link from the first week.</p></details>
+    <details><summary>Will I be able to update the website myself?</summary><p>Yes. Business websites and apps come with an admin panel where you can edit content, prices, offers and bookings without calling a developer. I also give you a short training session at handover.</p></details>
+    <details><summary>Do you provide hosting, domain and maintenance?</summary><p>I can set up hosting and your domain in your name, so you always own them. Hosting, domain and ongoing maintenance are quoted separately, and monthly maintenance plans are available after launch.</p></details>
+    <details><summary>Can you guarantee a first-page Google ranking?</summary><p>No honest developer can guarantee a ranking. What I do is build a fast, technically sound site with the right page structure, set up Search Console, Analytics and your Google Business Profile, and report on progress every month.</p></details>
+    <details><summary>Do you work with clients outside India?</summary><p>Yes. I have delivered projects for clients in the US, UK, Canada, Singapore, Dubai, Saudi Arabia, Kuwait and Bahrain. We work over WhatsApp, email and video calls, and I adjust meeting times to your time zone.</p></details>
+    <details><summary>How do payments work?</summary><p>Usually 40% to start, 40% after design and main build approval, and 20% at launch. Larger projects can be split into milestones. Bank transfer, UPI and international payments are accepted.</p></details>
+  </div>
+</div></section>
 </main>
 
 <div class="poster" id="contact"><div class="wrap in">
   <div style="display:flex;flex-direction:column;gap:32px">
-    <span class="kicker">07 / Contact</span>
+    <span class="kicker">12 / Contact</span>
     <h2>Have a project?<br><em>Let's build it.</em></h2>
     <div class="lines">
       <a href="tel:+919461593557">+91 94615 93557 <span>Call / WhatsApp</span></a>
@@ -438,8 +614,11 @@ footer .wrap{flex-direction:column}
         <label><input type="checkbox" name="need" value="SEO"><span>SEO</span></label>
       </div>
     </div>
+    <label class="field">Website package (optional)
+      <select name="package"><option value="Not sure yet">Not sure yet</option><option>Starter website</option><option>Business website</option><option>Custom web application</option><option>Mobile application</option></select>
+    </label>
     <label class="field">Business type
-      <select name="biz"><option>Doctor / Clinic</option><option>Advocate / Law firm</option><option>Showroom / Dealer</option><option>Real estate</option><option>Restaurant / Delivery</option><option>Startup / Other</option></select>
+      <select name="biz"><option>Doctor / Clinic</option><option>Advocate / Law firm</option><option>Showroom / Dealer</option><option>Real estate</option><option>Restaurant / Delivery</option><option>Hotel / Hospitality</option><option>Salon / Beauty</option><option>School / Education</option><option>Startup / Other</option></select>
     </label>
     <label class="field">Tell me a little about it<textarea name="msg" placeholder="What should it do? Any deadline?"></textarea></label>
     <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
@@ -448,7 +627,12 @@ footer .wrap{flex-direction:column}
   </form>
 </div></div>
 
+<div class="demo-modal" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+  <div class="demo-modal-card"><div class="demo-modal-head"><div><span class="kicker red">Custom demo concept</span><h2 id="demo-modal-title" style="font-size:26px;margin-top:5px">Website demo</h2></div><button class="icon-btn" id="close-demo" aria-label="Close demo">✕</button></div><div class="demo-modal-preview"><span class="mock-pill" id="modal-pill">Business website</span><h3 id="modal-headline">A better website for your business.</h3><p id="modal-copy">A clear, mobile-friendly website designed around your customers.</p><div class="mock-lines"><i></i><i></i><i></i></div><span class="mock-action" id="modal-action">GET IN TOUCH</span></div><p class="lead" style="font-size:14px;margin-top:16px">This is an original sample concept, not a live client website. The design, pages and features can be customised for your business.</p><a href="#contact" class="btn btn-primary" id="modal-contact" style="margin-top:16px">Request a similar website ↗</a></div>
+</div>
+
 <footer><div class="wrap"><span>© <span id="yr">2026</span> Vijay Yadav · Full-stack developer · Jaipur, India</span><a href="#top">Back to top ↑</a></div></footer>
+<a class="wa" href="https://wa.me/919461593557?text=Hi%20Vijay%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44a9.4 9.4 0 0 1 9.43 9.45c0 5.2-4.24 9.44-9.45 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.7 5.79.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.4l5.82-1.53a11.3 11.3 0 0 0 5.63 1.43h.01c6.26 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02z"/></svg></a>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
@@ -460,7 +644,7 @@ footer .wrap{flex-direction:column}
   var MOON='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
   function setTheme(t){root.dataset.theme=t;tb.innerHTML=t==='dark'?SUN:MOON}
   var saved=null;try{saved=localStorage.getItem('vjy-theme')}catch(e){}
-  setTheme(saved||'dark');
+  setTheme(saved||(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
   tb.addEventListener('click',function(){var t=root.dataset.theme==='dark'?'light':'dark';setTheme(t);try{localStorage.setItem('vjy-theme',t)}catch(e){}});
 
   var mb=$('.menu-btn'),mm=$('.mobile-menu');
@@ -525,6 +709,96 @@ footer .wrap{flex-direction:column}
   $('#f-offer').addEventListener('input',function(){D[cur].offer=this.value;renderPhone()});
   render();
 
+
+  // Industry demo previews: original sample concepts built into this page.
+  var demoContent={
+    clinic:['Doctor & clinic','Appointments made simple','Introduce your doctors, explain treatments and let patients request a convenient appointment.','BOOK APPOINTMENT'],
+    law:['Advocate & law firm','Clear advice. Confident next steps.','Show your practice areas, professional experience and consultation process in a trustworthy format.','REQUEST CONSULTATION'],
+    showroom:['Vehicle showroom','Explore your next vehicle','Present models, variants, key specifications and enquiry or test-drive options in one place.','BOOK A TEST DRIVE'],
+    realestate:['Real estate','Find a place to call home','Help buyers and tenants explore listings, compare details and contact the right property advisor.','EXPLORE PROPERTIES'],
+    restaurant:['Restaurant & café','A table worth coming back to','Showcase your menu, ambience, opening hours and reservation or ordering options.','VIEW MENU'],
+    hotel:['Hotel & hospitality','Make every stay feel special','Present rooms, amenities, location and booking enquiries with a polished guest experience.','CHECK AVAILABILITY'],
+    salon:['Salon & beauty','Your time. Your style.','Display services, pricing, stylist profiles and appointment requests in a beautiful mobile-first layout.','BOOK YOUR SLOT'],
+    education:['School & education','Learning starts with the right choice','Share courses, faculty, facilities, admission details and enquiry forms for prospective students.','EXPLORE COURSES']
+  };
+  var modal=$('#demo-modal');
+  document.querySelectorAll('.open-demo').forEach(function(b){b.addEventListener('click',function(){
+    var d=demoContent[b.dataset.demo];if(!d)return;
+    $('#demo-modal-title').textContent=d[0]+' website';$('#modal-pill').textContent=d[0];$('#modal-headline').textContent=d[1];$('#modal-copy').textContent=d[2];$('#modal-action').textContent=d[3];lastDemo=b.dataset.demo;lastFocus=b;modal.classList.add('open');$('#close-demo').focus();
+  })});
+  var lastDemo=null,lastFocus=null;
+  function closeDemo(){if(!modal.classList.contains('open'))return;modal.classList.remove('open');if(lastFocus)lastFocus.focus()}
+  $('#close-demo').addEventListener('click',closeDemo);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeDemo()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDemo()});
+  var demoBiz={clinic:'Doctor / Clinic',law:'Advocate / Law firm',showroom:'Showroom / Dealer',realestate:'Real estate',restaurant:'Restaurant / Delivery',hotel:'Hotel / Hospitality',salon:'Salon / Beauty',education:'School / Education'};
+  $('#modal-contact').addEventListener('click',function(){
+    lastFocus=null;closeDemo();
+    var biz=document.querySelector('select[name="biz"]');if(biz&&demoBiz[lastDemo])biz.value=demoBiz[lastDemo];
+    var pk=document.querySelector('select[name="package"]');if(pk)pk.value='Business website';
+  });
+  document.querySelectorAll('.package-cta').forEach(function(b){b.addEventListener('click',function(){
+    var sel=document.querySelector('select[name="package"]');if(sel)sel.value=b.dataset.package;
+  })});
+
+  // Cost estimator. Adjust these numbers to match your own pricing (₹).
+  var EST={
+    starter:{base:19990,per:2500,incl:5,label:'Starter website',sizeLabel:'Number of pages',min:1,max:10,def:5,weeks:[1,2],inc:'Design, build, launch'},
+    business:{base:39990,per:2500,incl:10,label:'Business website',sizeLabel:'Number of pages',min:5,max:30,def:10,weeks:[3,5],inc:'Design, CMS, SEO basics, launch'},
+    webapp:{base:89990,per:9000,incl:5,label:'Custom web application',sizeLabel:'Number of main screens / modules',min:3,max:30,def:8,weeks:[6,10],inc:'Design, frontend, backend, deployment'},
+    mobile:{base:49000,per:6000,incl:6,label:'Mobile application',sizeLabel:'Number of app screens',min:4,max:40,def:10,weeks:[5,9],inc:'Design, app build, store release'}
+  };
+  var ADD={admin:[15000,1,'Admin panel'],booking:[10000,1,'Booking'],payments:[12000,1,'Payments'],both:[0,2,'iOS & Android'],lang:[8000,1,'Multi-language'],seo:[18000,0,'SEO setup'],design:[12000,1,'Premium design']};
+  var inr=function(n){return '₹'+(Math.round(n/10)*10).toLocaleString('en-IN')};
+  var estForm=$('#est-form'),size=$('#est-size'),estState={};
+  function estType(){return estForm.querySelector('input[name=etype]:checked').value}
+  function calcEst(){
+    var t=EST[estType()],n=+size.value,add=[].slice.call($('#est-addons').querySelectorAll('input:checked')).map(function(i){return i.value});
+    var cost=t.base+Math.max(0,n-t.incl)*t.per,wk=0;
+    add.forEach(function(a){
+      if(a==='both')cost*=estType()==='mobile'?1.6:1;else cost+=ADD[a][0];
+      if(a!=='both'||estType()==='mobile')wk+=ADD[a][1];
+    });
+    var lo=cost,hi=cost*1.35;
+    $('#est-size-o').textContent=n;
+    $('#est-price').textContent=inr(lo)+' – '+inr(hi);
+    $('#est-time').textContent=(t.weeks[0]+wk)+'–'+(t.weeks[1]+wk)+' weeks';
+    $('#est-inc').textContent=t.inc;
+    estState={type:t.label,size:n,sizeLabel:t.sizeLabel,add:add.filter(function(a){return a!=='both'||estType()==='mobile'}).map(function(a){return ADD[a][2]}),price:$('#est-price').textContent,time:$('#est-time').textContent};
+  }
+  function setType(){
+    var t=EST[estType()];size.min=t.min;size.max=t.max;size.value=t.def;$('#est-size-l').textContent='2. '+t.sizeLabel;
+    $('#est-addons').querySelector('input[value=both]').parentNode.hidden=estType()!=='mobile';calcEst();
+  }
+  estForm.addEventListener('input',function(e){if(e.target.name==='etype')setType();else calcEst()});
+  setType();
+  $('#est-send').addEventListener('click',function(){
+    var q=$('#quote'),s=estState;
+    q.querySelector('select[name=package]').value=s.type;
+    var needs={admin:'Admin panel',seo:'SEO'};
+    q.querySelectorAll('input[name=need]').forEach(function(c){
+      if(c.value==='Website')c.checked=s.type!=='Mobile application';
+      if(c.value==='Mobile app')c.checked=s.type==='Mobile application';
+      if(c.value==='Admin panel'&&s.add.indexOf('Admin panel')>-1)c.checked=true;
+      if(c.value==='SEO'&&s.add.indexOf('SEO setup')>-1)c.checked=true;
+    });
+    q.querySelector('textarea[name=msg]').value='Estimate from website: '+s.type+', '+s.size+' '+s.sizeLabel.replace('Number of ','')+(s.add.length?', with '+s.add.join(', '):'')+'. Shown: '+s.price+', '+s.time+'.\n\n';
+    toast('Estimate added to the enquiry form');
+    setTimeout(function(){q.querySelector('input[name=name]').focus({preventScroll:true})},600);
+  });
+
+  // Scroll progress bar and active nav link
+  var prog=$('#progress'),navLinks=[].slice.call(document.querySelectorAll('.links a'));
+  function onScroll(){var h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if('IntersectionObserver' in window){
+    var secObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id='#'+e.target.id;navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){secObs.observe(s)});
+    // Reveal cards as they scroll into view
+    var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');rv.unobserve(t);setTimeout(function(){t.classList.remove('reveal','in')},700)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.sec-head,.grid>*,.site-demo,.seo-panel,.est>*,.faq details,.demo,.stack').forEach(function(el){el.classList.add('reveal');rv.observe(el)});
+  }
+
   // Web3Forms access key (https://web3forms.com). Enquiries are emailed to the address the key was created with.
   var WEB3FORMS_KEY='bed79fdd-6a96-455a-89bc-98747e77e018';
   var MAIL='vijay18.vishesh@gmail.com';
@@ -533,10 +807,10 @@ footer .wrap{flex-direction:column}
     var form=this,f=new FormData(form),btn=form.querySelector('button[type=submit]'),st=$('#q-status');
     if(f.get('botcheck'))return;
     var contact=String(f.get('contact')||'').trim();
-    var body='Name: '+f.get('name')+'\nContact: '+contact+'\nNeeds: '+(f.getAll('need').join(', ')||'-')+'\nBusiness: '+f.get('biz')+'\n\n'+(f.get('msg')||'');
+    var body='Name: '+f.get('name')+'\nContact: '+contact+'\nNeeds: '+(f.getAll('need').join(', ')||'-')+'\nPackage: '+f.get('package')+'\nBusiness: '+f.get('biz')+'\n\n'+(f.get('msg')||'');
     var subject='Project enquiry from '+f.get('name');
     if(WEB3FORMS_KEY.indexOf('YOUR_')===0){location.href='mailto:'+MAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);return}
-    var data={access_key:WEB3FORMS_KEY,subject:subject,from_name:'vijayyadav.app',name:f.get('name'),contact:contact,needs:f.getAll('need').join(', '),business:f.get('biz'),message:f.get('msg')};
+    var data={access_key:WEB3FORMS_KEY,subject:subject,from_name:'vijayyadav.app',name:f.get('name'),contact:contact,needs:f.getAll('need').join(', '),package:f.get('package'),business:f.get('biz'),message:f.get('msg')};
     if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact))data.email=contact;
     btn.disabled=true;btn.textContent='Sending…';st.hidden=true;
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
